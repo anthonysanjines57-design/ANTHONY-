@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ANTHONY | Ropa masculina</title>
+
+  <meta name="description"
+    content="ANTHONY — ropa masculina cómoda, moderna y con identidad propia. El Carmen, Manabí.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 11, 11, 0.96);
+      border-bottom: 1px solid #222;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #aaa;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px 60px;
+      text-align: center;
+    }
+
+    .hero small {
+      color: #aaa;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 12vw, 100px);
+      line-height: .9;
+      margin: 20px 0;
+      letter-spacing: -4px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #999;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #242424;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      background: #222;
+    }
+
+    .card-info {
+      padding: 18px;
+    }
+
+    .card-info h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .card-info p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .about {
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 420px;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">ANTHONY</div>
+
+    <nav>
+      <a href="#coleccion">Colección</a>
+      <a href="#marca">La marca</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <small>EL CARMEN • MANABÍ</small>
+
+    <h1>VISTE LO TUYO.</h1>
+
+    <p>
+      Ropa masculina cómoda, moderna y con identidad propia.
+      Modelos lisos, sin estampados ni marcas externas.
+    </p>
+
+    <a class="btn" href="#coleccion">
+      VER COLECCIÓN
+    </a>
+  </section>
+
+  <section id="coleccion">
+
+    <div class="section-title">
+      <h2>Colección</h2>
+      <p>Prendas para todos los días.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <img src="Screenshot_20261007_020147_com_openai_chatgpt_MainActivity_edit_125211853863120.jpg"
+             alt="Camiseta Oversize">
+        <div class="card-info">
+          <h3>Camiseta Oversize</h3>
+          <p>Comodidad y estilo urbano.</p>
+          <div class="price">$18.00</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="Screenshot_20261007_020146_com_openai_chatgpt_MainActivity_edit_125205363044789.jpg"
+             alt="Camisa Casual">
+        <div class="card-info">
+          <h3>Camisa Casual</h3>
+          <p>Diseño limpio y moderno.</p>
+          <div class="price">$22.00</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="Screenshot_20261007_020144_com_openai_chatgpt_MainActivity_edit_125198812307709.jpg"
+             alt="Bermuda Cargo">
+        <div class="card-info">
+          <h3>Bermuda Cargo</h3>
+          <p>Práctica y cómoda.</p>
+          <div class="price">$20.00</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="Screenshot_20261007_020142_com_openai_chatgpt_MainActivity_edit_125191403589170.jpg"
+             alt="Camiseta Básica">
+        <div class="card-info">
+          <h3>Camiseta Básica</h3>
+          <p>Un básico para cualquier ocasión.</p>
+          <div class="price">$15.00</div>
+        </div>
+      </article>
