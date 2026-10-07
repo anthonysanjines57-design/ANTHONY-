@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Anthony Ropa | Moda</title>
 
 <style>
@@ -249,4 +248,242 @@ footer{
     <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Camiseta">
     <h3>Camiseta Oversize</h3>
     <div class="price">$18.00</div>
-    <button class="add" onclick="addCart('Camiseta Oversize',
+    <button class="add" onclick="addCart('Camiseta Oversize',18)">
+        Agregar al carrito
+    </button>
+</div>
+
+<div class="product">
+    <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80" alt="Camisa">
+    <h3>Camisa Casual</h3>
+    <div class="price">$25.00</div>
+    <button class="add" onclick="addCart('Camisa Casual',25)">
+        Agregar al carrito
+    </button>
+</div>
+
+<div class="product">
+    <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=600&q=80" alt="Bermuda">
+    <h3>Bermuda Urbana</h3>
+    <div class="price">$22.00</div>
+    <button class="add" onclick="addCart('Bermuda Urbana',22)">
+        Agregar al carrito
+    </button>
+</div>
+
+<div class="product">
+    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=600&q=80" alt="Pantalón">
+    <h3>Pantalón Casual</h3>
+    <div class="price">$30.00</div>
+    <button class="add" onclick="addCart('Pantalón Casual',30)">
+        Agregar al carrito
+    </button>
+</div>
+
+</section>
+
+<section class="cart">
+
+<h2>🛒 Mi carrito</h2>
+
+<div id="cartItems">
+    <p>Tu carrito está vacío.</p>
+</div>
+
+<div class="total">
+    Total: $<span id="total">0.00</span>
+</div>
+
+<button class="checkout" onclick="showPayment()">
+    💳 Continuar al pago
+</button>
+
+<a id="whatsapp"
+   class="whatsapp"
+   href="#"
+   target="_blank">
+   📱 Pedir por WhatsApp
+</a>
+
+</section>
+
+<section class="payment" id="payment">
+
+<h2>💳 Método de pago</h2>
+
+<label>Método de pago</label>
+<select id="method">
+    <option value="debito">Tarjeta de débito</option>
+    <option value="credito">Tarjeta de crédito</option>
+</select>
+
+<label>Número de tarjeta</label>
+<input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+
+<label>Nombre del titular</label>
+<input type="text" placeholder="Nombre completo">
+
+<label>Fecha de vencimiento</label>
+<input type="text" placeholder="MM/AA" maxlength="5">
+
+<label>CVV</label>
+<input type="password" placeholder="123" maxlength="4">
+
+<button class="pay-button" onclick="finishPayment()">
+    Confirmar pedido
+</button>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Anthony Ropa</p>
+    <p>Todos los derechos reservados.</p>
+</footer>
+
+<script>
+
+let cart = [];
+
+function addCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    updateCart();
+}
+
+function removeCart(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+}
+
+function updateCart(){
+
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.getElementById("total");
+
+    if(cart.length === 0){
+
+        cartItems.innerHTML = "<p>Tu carrito está vacío.</p>";
+        totalElement.textContent = "0.00";
+
+        updateWhatsApp();
+        return;
+    }
+
+    let total = 0;
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((item,index)=>{
+
+        total += item.price;
+
+        const div = document.createElement("div");
+
+        div.className = "cart-item";
+
+        div.innerHTML = `
+            <span>
+                ${item.name} - $${item.price.toFixed(2)}
+            </span>
+
+            <button class="remove"
+                    onclick="removeCart(${index})">
+                Eliminar
+            </button>
+        `;
+
+        cartItems.appendChild(div);
+
+    });
+
+    totalElement.textContent = total.toFixed(2);
+
+    updateWhatsApp();
+}
+
+function updateWhatsApp(){
+
+    let message =
+        "Hola, quiero realizar un pedido en Anthony Ropa.%0A%0A";
+
+    if(cart.length === 0){
+
+        message +=
+            "Quiero conocer los productos disponibles.";
+
+    }else{
+
+        let total = 0;
+
+        cart.forEach(item=>{
+
+            message +=
+                "• " +
+                item.name +
+                " - $" +
+                item.price.toFixed(2) +
+                "%0A";
+
+            total += item.price;
+
+        });
+
+        message +=
+            "%0ATotal: $" +
+            total.toFixed(2);
+    }
+
+    const phone = "593994096349";
+
+    document.getElementById("whatsapp").href =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        message;
+}
+
+function showPayment(){
+
+    if(cart.length === 0){
+
+        alert("Agrega al menos un producto al carrito.");
+
+        return;
+    }
+
+    document.getElementById("payment").style.display =
+        "block";
+
+    document.getElementById("payment").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+function finishPayment(){
+
+    if(cart.length === 0){
+
+        alert("El carrito está vacío.");
+
+        return;
+    }
+
+    alert(
+        "¡Pedido recibido! Gracias por comprar en Anthony Ropa."
+    );
+}
+
+updateCart();
+
+</script>
+
+</body>
+</html>
