@@ -7,6 +7,7 @@
 <title>Anthony Ropa | Moda</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -15,7 +16,8 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#16002b,#32005c,#090014);
+    background:
+    radial-gradient(circle at top,#5b168f 0%,#25003f 35%,#08000f 100%);
     color:white;
     min-height:100vh;
 }
@@ -28,35 +30,38 @@ header{
 }
 
 .logo{
-    font-size:38px;
+    font-size:40px;
     font-weight:bold;
-    color:#d89cff;
-    text-shadow:0 0 15px #9d35ff;
+    color:#e3a7ff;
+    text-shadow:0 0 20px #a83cff;
+    letter-spacing:2px;
 }
 
 .slogan{
     margin-top:8px;
-    color:#ddd;
+    color:#eee;
+    font-size:16px;
 }
 
-.whatsapp{
+.whatsapp-principal{
     display:inline-block;
     margin-top:18px;
-    padding:12px 20px;
+    padding:13px 22px;
     background:#25D366;
     color:white;
     text-decoration:none;
-    border-radius:25px;
+    border-radius:30px;
     font-weight:bold;
+    box-shadow:0 5px 20px rgba(37,211,102,.3);
 }
 
 .container{
-    width:95%;
+    width:94%;
     max-width:1200px;
     margin:30px auto;
 }
 
-h2{
+.titulo{
     text-align:center;
     margin-bottom:25px;
     font-size:28px;
@@ -70,55 +75,84 @@ h2{
 
 .producto{
     background:rgba(255,255,255,.09);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:18px;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:20px;
     padding:12px;
     text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
     backdrop-filter:blur(8px);
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(170,60,255,.3);
 }
 
 .producto img{
     width:100%;
-    height:240px;
+    height:250px;
     object-fit:cover;
-    border-radius:14px;
+    border-radius:15px;
     display:block;
 }
 
 .producto h3{
-    margin:12px 0 6px;
+    margin:14px 0 7px;
+    font-size:19px;
 }
 
 .precio{
-    color:#d89cff;
-    font-size:20px;
+    color:#e2a2ff;
+    font-size:18px;
     font-weight:bold;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
-button{
-    border:none;
+.btn-whatsapp{
+    display:block;
+    width:100%;
+    padding:11px 8px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
     border-radius:25px;
-    padding:11px 18px;
-    cursor:pointer;
     font-weight:bold;
+    font-size:14px;
+    transition:.2s;
+}
+
+.btn-whatsapp:hover{
+    background:#1ebe5d;
 }
 
 .btn-carrito{
+    margin-top:10px;
+    width:100%;
+    padding:11px;
+    border:none;
+    border-radius:25px;
     background:#9d35ff;
     color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .btn-carrito:hover{
-    background:#b85cff;
+    background:#b75cff;
 }
 
 .carrito{
-    margin-top:35px;
-    background:rgba(0,0,0,.35);
+    margin-top:40px;
+    background:rgba(0,0,0,.4);
     border-radius:20px;
     padding:25px;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.carrito h2{
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .carrito-item{
@@ -130,12 +164,21 @@ button{
     border-bottom:1px solid rgba(255,255,255,.15);
 }
 
+.eliminar{
+    background:#ff3b3b;
+    color:white;
+    border:none;
+    border-radius:20px;
+    padding:7px 12px;
+    cursor:pointer;
+}
+
 .total{
     text-align:right;
-    font-size:23px;
+    font-size:22px;
     font-weight:bold;
+    color:#e0a0ff;
     margin-top:20px;
-    color:#d89cff;
 }
 
 .pago{
@@ -143,37 +186,88 @@ button{
 }
 
 .pago h3{
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .pago label{
     display:block;
-    margin:10px 0;
+    margin:12px 0;
 }
 
-.pago input{
+.pago input[type="text"],
+.pago input[type="password"]{
     width:100%;
     padding:12px;
+    margin-top:6px;
     border:none;
     border-radius:10px;
-    margin-top:5px;
+    outline:none;
+}
+
+.opcion-pago{
+    cursor:pointer;
 }
 
 .btn-pagar{
-    margin-top:15px;
     width:100%;
-    background:#d89cff;
-    color:#16002b;
+    margin-top:18px;
+    padding:14px;
+    border:none;
+    border-radius:25px;
+    background:#d99aff;
+    color:#19002b;
     font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn-pagar:hover{
+    background:#e6b8ff;
 }
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:30px 15px;
     margin-top:40px;
-    background:rgba(0,0,0,.4);
+    background:rgba(0,0,0,.45);
     color:#bbb;
 }
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:32px;
+    }
+
+    .productos{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .producto{
+        padding:8px;
+    }
+
+    .producto img{
+        height:210px;
+    }
+
+    .producto h3{
+        font-size:16px;
+    }
+
+    .precio{
+        font-size:15px;
+    }
+
+    .btn-whatsapp,
+    .btn-carrito{
+        font-size:12px;
+        padding:9px 5px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -181,127 +275,367 @@ footer{
 
 <header>
 
-<div class="logo">ANTHONY ROPA</div>
+<div class="logo">
+ANTHONY ROPA
+</div>
 
 <p class="slogan">
 Moda moderna • Calidad • Estilo
 </p>
 
-<a class="whatsapp"
+<a
+class="whatsapp-principal"
 href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20información%20sobre%20sus%20productos."
 target="_blank">
-💬 Comprar por WhatsApp
+
+💬 Hablar por WhatsApp
+
 </a>
 
 </header>
 
+
 <div class="container">
 
-<h2>🔥 Nuestra colección</h2>
+<h2 class="titulo">
+🔥 Nuestra colección
+</h2>
+
 
 <div class="productos">
 
+
 <!-- PRODUCTO 1 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_000827_com_facebook_katana_ImmersiveReactActivity_edit_124420539047901.jpg">
+
 <h3>Modelo 1</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 1',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%201.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 1')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 2 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_000831_com_facebook_katana_ImmersiveReactActivity_edit_125054266198128.jpg">
+
 <h3>Modelo 2</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 2',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%202.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 2')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 3 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_000834_com_facebook_katana_ImmersiveReactActivity_edit_125043481986622.jpg">
+
 <h3>Modelo 3</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 3',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%203.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 3')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 4 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020047_com_openai_chatgpt_MainActivity_edit_125122944342685.jpg">
+
 <h3>Modelo 4</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 4',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%204.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 4')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 5 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020049_com_openai_chatgpt_MainActivity_edit_125130135718099.jpg">
+
 <h3>Modelo 5</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 5',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%205.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 5')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 6 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020140_com_openai_chatgpt_MainActivity_edit_125184146436516.jpg">
+
 <h3>Modelo 6</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 6',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%206.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 6')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 7 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020142_com_openai_chatgpt_MainActivity_edit_125191403589170.jpg">
+
 <h3>Modelo 7</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 7',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%207.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 7')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 8 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020144_com_openai_chatgpt_MainActivity_edit_125198812307709.jpg">
+
 <h3>Modelo 8</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 8',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%208.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 8')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 9 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020146_com_openai_chatgpt_MainActivity_edit_125205363044789.jpg">
+
 <h3>Modelo 9</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 9',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
+
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%209.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 9')">
+
+🛒 Agregar al carrito
+
+</button>
+
+</div>
+
+
 
 <!-- PRODUCTO 10 -->
+
 <div class="producto">
+
 <img src="Screenshot_20261007_020147_com_openai_chatgpt_MainActivity_edit_125211853863120.jpg">
+
 <h3>Modelo 10</h3>
-<div class="precio">$25.00</div>
-<button class="btn-carrito" onclick="agregarCarrito('Modelo 10',25)">
-🛒 Agregar al carrito
-</button>
+
+<div class="precio">
+Precio por consultar
 </div>
 
+<a
+class="btn-whatsapp"
+target="_blank"
+href="https://wa.me/593994096349?text=Hola%20Anthony%20Ropa,%20quiero%20consultar%20el%20precio%20del%20Modelo%2010.">
+
+💬 Consultar precio
+
+</a>
+
+<button
+class="btn-carrito"
+onclick="agregarCarrito('Modelo 10')">
+
+🛒 Agregar al carrito
+
+</button>
+
 </div>
+
+
+</div>
+
 
 <!-- CARRITO -->
 
@@ -310,174 +644,272 @@ target="_blank">
 <h2>🛒 Mi carrito</h2>
 
 <div id="listaCarrito">
+
 <p>Tu carrito está vacío.</p>
+
 </div>
 
 <div class="total">
-Total: $<span id="total">0.00</span>
+
+Total: <span id="total">Precio por consultar</span>
+
 </div>
 
-<!-- PAGOS -->
+
+<!-- MÉTODO DE PAGO -->
 
 <div class="pago">
 
-<h3>💳 Método de pago</h3>
+<h3>
+💳 Método de pago
+</h3>
 
-<label>
-<input type="radio" name="pago" value="tarjeta" checked>
+
+<label class="opcion-pago">
+
+<input
+type="radio"
+name="pago"
+value="tarjeta"
+checked>
+
 Tarjeta de débito / crédito
+
 </label>
 
-<label>
-<input type="radio" name="pago" value="whatsapp">
+
+<label class="opcion-pago">
+
+<input
+type="radio"
+name="pago"
+value="whatsapp">
+
 Coordinar pago por WhatsApp
+
 </label>
+
 
 <div id="datosTarjeta">
 
+
 <label>
+
 Número de tarjeta
-<input type="text" placeholder="0000 0000 0000 0000">
+
+<input
+type="text"
+placeholder="0000 0000 0000 0000">
+
 </label>
 
+
 <label>
+
 Nombre del titular
-<input type="text" placeholder="Nombre completo">
+
+<input
+type="text"
+placeholder="Nombre completo">
+
 </label>
 
+
 <label>
+
 Fecha de vencimiento
-<input type="text" placeholder="MM/AA">
+
+<input
+type="text"
+placeholder="MM/AA">
+
 </label>
 
+
 <label>
+
 CVV
-<input type="password" placeholder="CVV">
+
+<input
+type="password"
+placeholder="CVV">
+
 </label>
+
 
 </div>
 
-<button class="btn-pagar" onclick="realizarPedido()">
+
+<button
+class="btn-pagar"
+onclick="realizarPedido()">
+
 💳 Realizar pedido
+
 </button>
 
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 
 <footer>
 
-© 2026 Anthony Ropa  
-<br>
+© 2026 Anthony Ropa
+
+<br><br>
+
 Moda y estilo para todos.
 
+<br><br>
+
+WhatsApp: 0994096349
+
 </footer>
+
+
 
 <script>
 
 let carrito = [];
 
-function agregarCarrito(nombre, precio){
+
+function agregarCarrito(nombre){
 
     carrito.push({
-        nombre:nombre,
-        precio:precio
+        nombre:nombre
     });
 
     mostrarCarrito();
+
 }
+
 
 function mostrarCarrito(){
 
-    const lista = document.getElementById("listaCarrito");
-    const totalElemento = document.getElementById("total");
+    const lista =
+    document.getElementById("listaCarrito");
 
     lista.innerHTML = "";
 
+
     if(carrito.length === 0){
 
-        lista.innerHTML = "<p>Tu carrito está vacío.</p>";
-
-        totalElemento.textContent = "0.00";
+        lista.innerHTML =
+        "<p>Tu carrito está vacío.</p>";
 
         return;
+
     }
 
-    let total = 0;
 
     carrito.forEach((producto,index)=>{
 
-        total += producto.precio;
+        const item =
+        document.createElement("div");
 
-        const item = document.createElement("div");
+        item.className =
+        "carrito-item";
 
-        item.className = "carrito-item";
 
         item.innerHTML = `
-            <span>${producto.nombre} - $${producto.precio.toFixed(2)}</span>
-            <button onclick="eliminarProducto(${index})">
-            ❌
-            </button>
+
+        <span>
+        ${producto.nombre}
+        - Precio por consultar
+        </span>
+
+        <button
+        class="eliminar"
+        onclick="eliminarProducto(${index})">
+
+        ❌
+
+        </button>
+
         `;
+
 
         lista.appendChild(item);
 
     });
 
-    totalElemento.textContent = total.toFixed(2);
 }
+
 
 function eliminarProducto(index){
 
     carrito.splice(index,1);
 
     mostrarCarrito();
+
 }
+
 
 function realizarPedido(){
 
     if(carrito.length === 0){
 
-        alert("Primero agrega un producto al carrito.");
+        alert(
+        "Primero agrega una prenda al carrito."
+        );
 
         return;
+
     }
 
-    let mensaje = "Hola Anthony Ropa, quiero realizar este pedido:%0A%0A";
 
-    let total = 0;
+    let mensaje =
+    "Hola Anthony Ropa, quiero realizar una consulta sobre:%0A%0A";
+
 
     carrito.forEach(producto=>{
 
-        mensaje += "• " + producto.nombre + " - $" + producto.precio.toFixed(2) + "%0A";
-
-        total += producto.precio;
+        mensaje +=
+        "• " +
+        producto.nombre +
+        " - Precio por consultar%0A";
 
     });
 
-    mensaje += "%0ATotal: $" + total.toFixed(2);
+
+    mensaje +=
+    "%0AQuiero conocer los precios y formas de pago.";
+
 
     window.open(
-        "https://wa.me/593994096349?text=" + mensaje,
+        "https://wa.me/593994096349?text=" +
+        mensaje,
         "_blank"
     );
+
 }
 
-document.querySelectorAll('input[name="pago"]').forEach(radio=>{
 
-    radio.addEventListener("change",function(){
+document
+.querySelectorAll('input[name="pago"]')
+.forEach(radio=>{
 
-        const datos = document.getElementById("datosTarjeta");
+    radio.addEventListener(
+    "change",
+    function(){
+
+        const datosTarjeta =
+        document.getElementById("datosTarjeta");
+
 
         if(this.value === "tarjeta"){
 
-            datos.style.display = "block";
+            datosTarjeta.style.display =
+            "block";
 
         }else{
 
-            datos.style.display = "none";
+            datosTarjeta.style.display =
+            "none";
 
         }
 
@@ -488,4 +920,4 @@ document.querySelectorAll('input[name="pago"]').forEach(radio=>{
 </script>
 
 </body>
-</html>
+    </html>
