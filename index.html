@@ -3,83 +3,899 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthony Ropa</title>
+
+    <title>Anthony Ropa | Moda urbana</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero-tienda {
+            min-height: 500px;
+            background: linear-gradient(135deg, #111 0%, #333 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-contenido {
+            max-width: 800px;
+        }
+
+        .hero-contenido h1 {
+            font-size: 55px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero-contenido p {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .boton-principal {
+            display: inline-block;
+            background: white;
+            color: #111;
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-principal:hover {
+            background: #ddd;
+            transform: scale(1.03);
+        }
+
+        .seccion {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion p {
+            color: #777;
+        }
+
+        .categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .categoria {
+            background: #111;
+            color: white;
+            min-height: 180px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .categoria:hover {
+            transform: translateY(-5px);
+        }
+
+        .categoria h3 {
+            font-size: 24px;
+        }
+
+        .productos-tienda {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .producto-tienda {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .producto-tienda:hover {
+            transform: translateY(-5px);
+        }
+
+        .foto-producto {
+            height: 330px;
+            background: linear-gradient(135deg, #eeeeee, #d9d9d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+        }
+
+        .info-producto {
+            padding: 20px;
+        }
+
+        .info-producto h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .info-producto p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .boton-producto {
+            display: block;
+            text-align: center;
+            background: #111;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contacto {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .contacto p {
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .instagram {
+            display: inline-block;
+            margin-top: 20px;
+            background: white;
+            color: #111;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero-contenido h1 {
+                font-size: 38px;
+            }
+
+            .hero-contenido p {
+                font-size: 17px;
+            }
+
+            .seccion {
+                padding: 50px 15px;
+            }
+
+            .foto-producto {
+                height: 280px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>ANTHONY ROPA</h1>
-    <p>Moda moderna y urbana</p>
-</header>
+    <!-- ENCABEZADO -->
 
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#productos">Ropa</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+    <header>
+        <h1>ANTHONY ROPA</h1>
+        <p>Moda urbana • Estilo • Calidad</p>
+    </header>
 
-<section class="hero" id="inicio">
-    <h2>Tu estilo, tu forma</h2>
-    <p>Descubre nuestra colección de ropa moderna y cómoda.</p>
-</section>
+    <!-- MENÚ -->
 
-<section class="productos" id="productos">
-    <h2>Nuestra colección</h2>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-    <div class="grid">
+    <!-- PORTADA -->
 
-        <div class="producto">
-            <div style="height:280px; display:flex; align-items:center; justify-content:center; background:#eee; font-size:70px;">
-                👕
-            </div>
-            <h3>Camisas</h3>
-            <p>Diseños modernos y cómodos.</p>
-            <a href="#contacto" class="boton">Consultar</a>
+    <section class="hero-tienda" id="inicio">
+
+        <div class="hero-contenido">
+
+            <h1>ANTHONY ROPA</h1>
+
+            <p>
+                Descubre prendas modernas, cómodas y con estilo
+                para crear tu propio look.
+            </p>
+
+            <a href="#coleccion" class="boton-principal">
+                VER COLECCIÓN
+            </a>
+
         </div>
 
-        <div class="producto">
-            <div style="height:280px; display:flex; align-items:center; justify-content:center; background:#eee; font-size:70px;">
-                👕
-            </div>
-            <h3>Camisas Oversize</h3>
-            <p>Estilo urbano y actual.</p>
-            <a href="#contacto" class="boton">Consultar</a>
+    </section>
+
+    <!-- CATEGORÍAS -->
+
+    <section class="seccion" id="categorias">
+
+        <div class="titulo-seccion">
+
+            <h2>Categorías</h2>
+
+            <p>
+                Encuentra el estilo que buscas.
+            </p>
+
         </div>
 
-        <div class="producto">
-            <div style="height:280px; display:flex; align-items:center; justify-content:center; background:#eee; font-size:70px;">
-                🩳
+        <div class="categorias">
+
+            <div class="categoria">
+                <h3>CAMISAS</h3>
             </div>
-            <h3>Bermudas</h3>
-            <p>Comodidad para cualquier ocasión.</p>
-            <a href="#contacto" class="boton">Consultar</a>
+
+            <div class="categoria">
+                <h3>OVERSIZE</h3>
+            </div>
+
+            <div class="categoria">
+                <h3>BERMUDAS</h3>
+            </div>
+
+            <div class="categoria">
+                <h3>PANTALONES</h3>
+            </div>
+
         </div>
 
-        <div class="producto">
-            <div style="height:280px; display:flex; align-items:center; justify-content:center; background:#eee; font-size:70px;">
-                👖
-            </div>
-            <h3>Pantalones</h3>
-            <p>Estilo y comodidad.</p>
-            <a href="#contacto" class="boton">Consultar</a>
+    </section>
+
+    <!-- COLECCIÓN -->
+
+    <section class="seccion" id="coleccion">
+
+        <div class="titulo-seccion">
+
+            <h2>Nuestra colección</h2>
+
+            <p>
+                Conoce algunas de nuestras prendas.
+            </p>
+
         </div>
 
-    </div>
-</section>
+        <div class="productos-tienda">
 
-<section class="hero" id="contacto">
-    <h2>¿Te interesa alguna prenda?</h2>
-    <p>Contáctanos para conocer disponibilidad y precios.</p>
-    <br>
-    <a href="#" class="boton">Contactar</a>
-</section>
+            <!-- PRODUCTO 1 -->
 
-<footer>
-    <p>© 2026 Anthony Ropa</p>
-    <p>Todos los derechos reservados.</p>
-</footer>
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👕
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Camisa clásica</h3>
+
+                    <p>
+                        Diseño limpio y moderno.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👕
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Camisa Oversize</h3>
+
+                    <p>
+                        Estilo urbano y actual.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    🩳
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Bermuda</h3>
+
+                    <p>
+                        Comodidad para todos los días.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 4 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👖
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Pantalón</h3>
+
+                    <p>
+                        Diseño moderno y versátil.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="seccion contacto" id="contacto">
+
+        <div class="titulo-seccion">
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                ¿Te interesa alguna de nuestras prendas?
+            </p>
+
+            <p>
+                Escríbenos para conocer disponibilidad y precios.
+            </p>
+
+            <a href="#" class="instagram">
+                CONTACTAR
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>© 2026 Anthony Ropa</p>
+
+        <p>
+            Moda urbana y moderna
+        </p>
+
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anthony Ropa | Moda urbana</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero-tienda {
+            min-height: 500px;
+            background: linear-gradient(135deg, #111 0%, #333 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-contenido {
+            max-width: 800px;
+        }
+
+        .hero-contenido h1 {
+            font-size: 55px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero-contenido p {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .boton-principal {
+            display: inline-block;
+            background: white;
+            color: #111;
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-principal:hover {
+            background: #ddd;
+            transform: scale(1.03);
+        }
+
+        .seccion {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion p {
+            color: #777;
+        }
+
+        .categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .categoria {
+            background: #111;
+            color: white;
+            min-height: 180px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .categoria:hover {
+            transform: translateY(-5px);
+        }
+
+        .categoria h3 {
+            font-size: 24px;
+        }
+
+        .productos-tienda {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .producto-tienda {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .producto-tienda:hover {
+            transform: translateY(-5px);
+        }
+
+        .foto-producto {
+            height: 330px;
+            background: linear-gradient(135deg, #eeeeee, #d9d9d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+        }
+
+        .info-producto {
+            padding: 20px;
+        }
+
+        .info-producto h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .info-producto p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .boton-producto {
+            display: block;
+            text-align: center;
+            background: #111;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contacto {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .contacto p {
+            color: #ccc;
+            margin: 10px 0;
+        }
+
+        .instagram {
+            display: inline-block;
+            margin-top: 20px;
+            background: white;
+            color: #111;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero-contenido h1 {
+                font-size: 38px;
+            }
+
+            .hero-contenido p {
+                font-size: 17px;
+            }
+
+            .seccion {
+                padding: 50px 15px;
+            }
+
+            .foto-producto {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+        <h1>ANTHONY ROPA</h1>
+        <p>Moda urbana • Estilo • Calidad</p>
+    </header>
+
+    <!-- MENÚ -->
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- PORTADA -->
+
+    <section class="hero-tienda" id="inicio">
+
+        <div class="hero-contenido">
+
+            <h1>ANTHONY ROPA</h1>
+
+            <p>
+                Descubre prendas modernas, cómodas y con estilo
+                para crear tu propio look.
+            </p>
+
+            <a href="#coleccion" class="boton-principal">
+                VER COLECCIÓN
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CATEGORÍAS -->
+
+    <section class="seccion" id="categorias">
+
+        <div class="titulo-seccion">
+
+            <h2>Categorías</h2>
+
+            <p>
+                Encuentra el estilo que buscas.
+            </p>
+
+        </div>
+
+        <div class="categorias">
+
+            <div class="categoria">
+                <h3>CAMISAS</h3>
+            </div>
+
+            <div class="categoria">
+                <h3>OVERSIZE</h3>
+            </div>
+
+            <div class="categoria">
+                <h3>BERMUDAS</h3>
+            </div>
+
+            <div class="categoria">
+                <h3>PANTALONES</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COLECCIÓN -->
+
+    <section class="seccion" id="coleccion">
+
+        <div class="titulo-seccion">
+
+            <h2>Nuestra colección</h2>
+
+            <p>
+                Conoce algunas de nuestras prendas.
+            </p>
+
+        </div>
+
+        <div class="productos-tienda">
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👕
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Camisa clásica</h3>
+
+                    <p>
+                        Diseño limpio y moderno.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👕
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Camisa Oversize</h3>
+
+                    <p>
+                        Estilo urbano y actual.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    🩳
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Bermuda</h3>
+
+                    <p>
+                        Comodidad para todos los días.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCTO 4 -->
+
+            <div class="producto-tienda">
+
+                <div class="foto-producto">
+                    👖
+                </div>
+
+                <div class="info-producto">
+
+                    <h3>Pantalón</h3>
+
+                    <p>
+                        Diseño moderno y versátil.
+                    </p>
+
+                    <div class="precio">
+                        Consultar precio
+                    </div>
+
+                    <a href="#contacto" class="boton-producto">
+                        CONSULTAR
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="seccion contacto" id="contacto">
+
+        <div class="titulo-seccion">
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                ¿Te interesa alguna de nuestras prendas?
+            </p>
+
+            <p>
+                Escríbenos para conocer disponibilidad y precios.
+            </p>
+
+            <a href="#" class="instagram">
+                CONTACTAR
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>© 2026 Anthony Ropa</p>
+
+        <p>
+            Moda urbana y moderna
+        </p>
+
+    </footer>
 
 </body>
 </html>
